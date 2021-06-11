@@ -79,3 +79,15 @@ sudo apt-get -qq -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--f
 
 echo "Reducing journalctl vacuum time to 10 days"
 sudo journalctl --vacuum-time=10d
+
+echo "Updating environment variables"
+echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/jdk1.8.0_251/bin:/usr/lib/jvm/jdk1.8.0_251/db/bin:/usr/lib/jvm/jdk1.8.0_251/jre/bin"' > /etc/environment
+echo 'J2SDKDIR="/usr/lib/jvm/jdk1.8.0_251"' >> /etc/environment
+echo 'J2REDIR="/usr/lib/jvm/jdk1.8.0_251/jre"' >> /etc/environment
+echo 'JAVA_HOME="/usr/lib/jvm/jdk1.8.0_251"' >> /etc/environment
+echo 'DERBY_HOME="/usr/lib/jvm/jdk1.8.0_251/db"' >> /etc/environment
+
+echo 'export ANDROID_HOME=/home/victor/Android/Sdk' >> $HOME/.bashrc
+echo 'export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools' >> $HOME/.bashrc
+echo 'export JAVA_HOME="/usr/lib/jvm/jdk1.8.0_251"' >> $HOME/.bashrc
+echo 'export PATH=$PATH:$JAVA_HOME/bin' >> $HOME/.bashrc
