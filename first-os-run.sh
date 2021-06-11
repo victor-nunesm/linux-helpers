@@ -43,7 +43,7 @@ sudo groupadd docker
 sudo usermod -aG docker ${USER}
 
 echo "Installing Javascript development environment"
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 source ~/.profile
 nvm install --lts
 npm i -g -g --quiet --no-progress cordova
