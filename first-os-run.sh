@@ -1,5 +1,4 @@
 #!/bin/bash
-echo 'GOVERNOR="powersave"' | sudo tee /etc/default/cpufrequtils
 
 echo 'Upading system'
 sudo apt-get -qq -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" update
