@@ -45,6 +45,9 @@ echo "Installing Javascript development environment"
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 source ~/.profile
 nvm install --lts
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 npm i -g -g --quiet --no-progress cordova
 npm i -g -g --quiet --no-progress cordova-res --unsafe-perm
 npm i -g -g --quiet --no-progress @angular/cli @ionic/cli express express-generator native-run
